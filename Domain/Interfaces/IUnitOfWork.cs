@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Domain.Interfaces
 {
-    public interface IUnitOfWork : IDisposable
-    {
-        IPaymentRepository Payments { get; }
-        int Complete();
-    }
+	public interface IUnitOfWork : IDisposable
+	{
+		IPaymentRepository Payments { get; }
+		int Complete();
+	}
 }

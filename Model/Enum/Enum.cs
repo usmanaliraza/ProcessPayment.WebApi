@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SharedComponent.Enum
+﻿namespace SharedComponent.Enum
 {
 	public class Enum
 	{

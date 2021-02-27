@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using FluentValidation;
+﻿using FluentValidation;
 using Model.Dto;
+using System;
 
 namespace WebApi.Validator
 {
@@ -21,7 +19,7 @@ namespace WebApi.Validator
 				GreaterThanOrEqualTo(p => DateTime.Now).WithMessage("Expiration cannot be past");
 
 			RuleFor(x => x.SecurityCode)
-				.Must(x => x == null || x.Length == 2).WithMessage("Security card length must be 3 or null");
+				.Must(x => x == null || x.Length == 3).WithMessage("Security card length must be 3 or null");
 
 			RuleFor(p => p.Amount)
 				.NotEmpty().WithMessage("{PropertyName} should be not empty. ")

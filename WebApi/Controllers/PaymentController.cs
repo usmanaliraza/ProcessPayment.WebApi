@@ -1,12 +1,12 @@
-﻿using System;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using Domain.Entities;
 using Domain.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Model.Dto;
 using SharedComponent.Services;
+using System;
+using System.Threading.Tasks;
 
 namespace WebApi.Controllers
 {
@@ -55,6 +55,6 @@ namespace WebApi.Controllers
 		private async Task<bool> CallGatewayService(decimal amount)
 		{
 			return await _paymentService.ProcessPaymentAsync(amount);
-		} 
+		}
 	}
 }
